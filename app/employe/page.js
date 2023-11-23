@@ -39,7 +39,7 @@ const page = () => {
 
   useEffect(() => {
     SignupHandler();
-  }, [])
+  }, [SignupHandler])
   
 
   return (
