@@ -36,9 +36,8 @@ const page = () => {
     if (isAuthenticated) router.push("/student/auth");
   }, [isAuthenticated]);
 
-  useEffect((e) => {
-    // e.preventDefault();
-    e.SignupHandler();
+  useEffect(() => {
+    SignupHandler();
   }, [SignupHandler])
   
 
