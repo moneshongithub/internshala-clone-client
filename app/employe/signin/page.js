@@ -25,9 +25,9 @@ const page = () => {
     if (isAuthenticated) router.push("/employe/auth");
   }, [isAuthenticated]);    
 
-  // useEffect(() => {
-  //   SigninHandler();
-  //   }, []) 
+  useEffect(() => {
+    SigninHandler();
+    }, [SigninHandler]) 
 
   return (
     <form className={styles.form}>

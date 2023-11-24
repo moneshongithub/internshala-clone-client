@@ -24,7 +24,7 @@ const page = () => {
 
   useEffect(() => {
     SigninHandler();
-  }, [])
+  }, [SigninHandler])
   
 
   return (
