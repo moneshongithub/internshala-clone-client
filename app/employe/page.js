@@ -37,10 +37,10 @@ const page = () => {
     if (isAuthenticated) router.push("/employe/auth");
   }, [isAuthenticated]);
 
-  // useEffect(() => {
-  //   SignupHandler();
-  // }, [SignupHandler])
-  
+    useEffect(() => {
+      SignupHandler();
+    }, [SignupHandler])
+    
 
   return (
     <div className="container mt-5">

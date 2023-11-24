@@ -37,7 +37,7 @@ const page = () => {
   }, [isAuthenticated]);
 
   useEffect((e) => {
-    e.preventDefault();
+    // e.preventDefault();
     e.SignupHandler();
   }, [SignupHandler])
   
