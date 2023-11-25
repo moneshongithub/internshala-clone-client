@@ -16,7 +16,10 @@ const page = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const dispatch = useDispatch();
-
+  const router = useRouter();
+  
+  const { isAuthenticated } = useSelector((state) => state.studentReducer);
+  
   const SignupHandler = () => {
     const newStudent = {
       firstname,
@@ -30,15 +33,13 @@ const page = () => {
     dispatch(asyncsignupstudent(newStudent));
   };
 
-  const router = useRouter();
-  const { isAuthenticated } = useSelector((state) => state.studentReducer);
   useEffect(() => {
     if (isAuthenticated) router.push("/student/auth");
   }, [isAuthenticated]);
 
-  useEffect(() => {
-    SignupHandler();
-  }, [SignupHandler])
+  // useEffect(() => {
+  //   SignupHandler();
+  // }, [SignupHandler])
   
 
   return (

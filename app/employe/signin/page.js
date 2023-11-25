@@ -16,7 +16,7 @@ const page = () => {
   const { isAuthenticated } = useSelector((state) => state.employeReducer);
   
   const SigninHandler = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const employe = { email, password };
     dispatch(asyncsigninemploye(employe));
   }
@@ -25,9 +25,9 @@ const page = () => {
     if (isAuthenticated) router.push("/employe/auth");
   }, [isAuthenticated]);    
 
-  useEffect(() => {
-    SigninHandler();
-    }, [SigninHandler]) 
+  // useEffect(() => {
+  //   SigninHandler();
+  //   }, [SigninHandler]) 
 
   return (
     <form className={styles.form}>

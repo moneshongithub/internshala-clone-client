@@ -16,6 +16,9 @@ const page = () => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const dispatch = useDispatch();
+  const router = useRouter();
+  
+  const { isAuthenticated } = useSelector((state) => state.employeReducer);
 
   const SignupHandler = (e) => {
     // e.preventDefault(); 
@@ -31,15 +34,13 @@ const page = () => {
     dispatch(asyncsignupemploye(newemploye));
   };
 
-  const router = useRouter();
-  const { isAuthenticated } = useSelector((state) => state.employeReducer);
   useEffect(() => {
     if (isAuthenticated) router.push("/employe/auth");
   }, [isAuthenticated]);
 
-    useEffect(() => {
-      SignupHandler();
-    }, [SignupHandler])
+    // useEffect(() => {
+    //   SignupHandler();
+    // }, [SignupHandler])
     
 
   return (

@@ -22,9 +22,9 @@ const page = () => {
     if (isAuthenticated) router.push("/student/auth");
   }, [isAuthenticated]);
 
-  useEffect(() => {
-    SigninHandler();
-  }, [SigninHandler])
+  // useEffect(() => {
+  //   SigninHandler();
+  // }, [SigninHandler])
   
 
   return (
